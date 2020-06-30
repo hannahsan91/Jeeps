@@ -1,10 +1,13 @@
-class Jeeps::Scraper
-    
-    def scraper 
-        url = "https://www.officialdata.org/cars/Jeep"
-        unparsed_page = HTTParty.get(url)
-        parsed_page = Nokogiri::HTML(unparsed_page)
+class Jeep::Scraper
+    BASE_URL = "https://www.officialdata.org/cars/Jeep"
+
+    def self.scrape_models 
+        url = "#{BASE_URL}/Wrangler%204WD"
+        page = Nokogiri::HTML(open(url))
+        rows = page.css('div.table-container')
+        
     end
 
+    def self.scrape_mileage
 end
 scraper

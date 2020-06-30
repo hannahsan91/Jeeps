@@ -1,12 +1,12 @@
 class Jeeps::CLI
 
     def welcome
-        puts "Hi! Come to check out some Jeeps?"
+        puts "Hey! Come to check out some Jeeps? You can use this CLI to check the mileage on the latest Jeep models."
         menu
     end
-    
+
     def call 
-        puts "Jeep Models"
+        puts "Jeep models"
         scrape_list
         menu
     end
@@ -19,8 +19,11 @@ class Jeeps::CLI
         puts "Input 'browse' to view model list, or 'done' to exit."
         if user_input == 'browse'
             list
-        elsif user_input == 'done'
+        else user_input == 'done'
             exit
+        elsif 
+            puts "Try again"
+        end
         end
     end
 
@@ -29,7 +32,7 @@ class Jeeps::CLI
     end
 
     def scrape_list
-        Jeeps::Scraper.scrape_jeeps
+        Jeeps::Scraper.scrape_models
     end
 
     def model_info
