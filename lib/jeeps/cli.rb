@@ -48,4 +48,14 @@ end
 ####### code along with eden events
 
 class Jeeps::CLI
+    def call
+        puts "Thanks for coming to check out Jeep Wrangler mileage! Remember, it's the smiles per gallon, not the miles for gallon!"
+    end
+
+
+
+
+
+
+
 end

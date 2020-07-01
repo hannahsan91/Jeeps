@@ -1,6 +1,6 @@
 # Jeeps
 
-Hi! This CLI is to help you find out the mileage on the latest 4WD Wrangler Unlimited.
+"Thanks for coming to check out Jeep Wrangler mileage! Remember, it's the smiles per gallon, not the miles for gallon!"
 
 ## Installation
 
