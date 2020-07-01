@@ -1,6 +1,6 @@
 # Jeeps
 
-Hi! This CLI is to help you find out the mileage on current Jeep Wrangler models.
+Hi! This CLI is to help you find out the mileage on the latest 4WD Wrangler Unlimited.
 
 ## Installation
 

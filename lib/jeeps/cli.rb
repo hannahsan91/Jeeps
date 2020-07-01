@@ -1,13 +1,12 @@
 class Jeeps::CLI
 
     def welcome
-        puts "Hey! Come to check out some Jeeps? You can use this CLI to check the mileage on the latest Jeep models."
+        puts "Hey! Come to check out some Jeeps? You can use this CLI to check the mileage on the latest 4WD Wrangler Unlimited."
         menu
     end
 
     def call 
-        puts "Jeep models"
-        scrape_list
+        puts "Jeep mileage"
         menu
     end
 
@@ -16,9 +15,9 @@ class Jeeps::CLI
     end
 
     def menu
-        puts "Input 'list' to view models, or 'done' to exit."
-        if user_input == 'browse'
-            list
+        puts "Input 'mileage' to view this latest model's MPG, or 'done' to exit."
+        if user_input == 'mileage'
+            mileage
         elsif user_input == 'done'
             exit
         else 
@@ -27,12 +26,12 @@ class Jeeps::CLI
         mileage
     end
 
-    def list
-        puts "Wrangler 4WD"
+    def mileage=(mileage)
+        @mileage = mileage
     end
 
     def mileage
-        return mileage
+        @mileage
     end
 
     def exit
@@ -40,8 +39,13 @@ class Jeeps::CLI
     end
 
     def scrape_list
-        Jeeps::Scraper.scrape_models
+        Jeeps::Scraper.scrape_mileage
     end
 
 end
 
+
+####### code along with eden events
+
+class Jeeps::CLI
+end

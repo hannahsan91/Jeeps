@@ -1,12 +1,10 @@
-classes
-    CLI
-    Scraper
-    Jeep
+** changed typo in name of readme to "hannahsan91" (was "hannansan91")
 
-    - CLI greet - control flow within user interafce 
+    User sees list of models
+    User selects year
+    User sees MPG
 
-    - scraper - scapre data from site 
-
-    - jeep - data about vehicle 
-
-    ** changed typo in name of readme to "hannahsan91" (was "hannansan91")
+    Classes
+        Year
+        CLI
+        Scraper
