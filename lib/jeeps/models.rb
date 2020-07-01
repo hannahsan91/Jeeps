@@ -5,7 +5,7 @@ class Jeeps::Models
 
     def initialize(model)
         @model = model
-        @@all < self
+        @@all << self
         @@all = @@all.sort_by{|models| model.name}
     end
 
@@ -24,4 +24,5 @@ class Jeeps::Models
     def self.clear
         @@all.clear
     end
+
 end

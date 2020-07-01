@@ -1,12 +1,13 @@
 class Jeeps::Mileage
-    attr_accessor :highway, :city
+    attr_accessor :highway, :city, :combined
 
     @@all = []
 
     def initialize(mileage)
         @highway = highway
         @city = city
-        @@all < self
+        @combined = combined
+        @@all << self
         @@all = @@all.sort_by{|mileage| mileage.number}
     end
 
@@ -19,7 +20,7 @@ class Jeeps::Mileage
     end
 
     def self.all
-        @@allend
+        @@all
     end
 
     def self.clear

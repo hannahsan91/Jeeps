@@ -16,15 +16,23 @@ class Jeeps::CLI
     end
 
     def menu
-        puts "Input 'browse' to view model list, or 'done' to exit."
+        puts "Input 'list' to view models, or 'done' to exit."
         if user_input == 'browse'
             list
-        else user_input == 'done'
+        elsif user_input == 'done'
             exit
-        elsif 
+        else 
             puts "Try again"
         end
-        end
+        mileage
+    end
+
+    def list
+        puts "Wrangler 4WD"
+    end
+
+    def mileage
+        return mileage
     end
 
     def exit
@@ -35,5 +43,5 @@ class Jeeps::CLI
         Jeeps::Scraper.scrape_models
     end
 
-    def model_info
+end
 
