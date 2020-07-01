@@ -1,6 +1,6 @@
 # Jeeps
 
-"Thanks for coming to check out Jeep Wrangler mileage! Remember, it's the smiles per gallon, not the miles for gallon!"
+Thanks for coming to check out Wrangler mileage! Remember: it's the smiles per gallon, not the miles per gallon!
 
 ## Installation
 
