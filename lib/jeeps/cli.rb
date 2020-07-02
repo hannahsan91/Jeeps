@@ -64,19 +64,27 @@ class Jeeps::CLI
 
     def list_years
         puts "On what year are you interested in checking mileage?"
-        # list yeras
         @years.each.with_index(1) do |year, index|
             puts "#{index}. #{year}"
         end
     end
 
     def get_user_year
-        chosen_year = gets.strip
-        # if valid_input(chosen_year, @years)
-        # end
+        chosen_year = gets.strip.to_i
+        show_mileage_for(chosen_year) if valid_input(chosen_year, @years)
+        end
     end
 
     def valid_input(input, data)
-        input.to_i <= data.length && input > 0
+        input.to_i <= data.length && input.to_i > 0
+    end
+
+    def show_mileage_for(chosen_year)
+        year = @years[chosen_year - 1]
+        puts "Here is the mileage for #{year}"
+        # Jeeps::Mileage.all.each.with_index(1) do | mileage |
+        #     puts mileage.number
+        # end
+        # get_mpg_for
     end
 end
