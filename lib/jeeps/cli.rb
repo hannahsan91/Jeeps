@@ -9,8 +9,6 @@ class Jeeps::CLI
     end
 
     def get_years
-        Jeeps::Years.new("2012")
-        Jeeps::Years.new("2020")
         @years = Jeeps::Year.all
     end
 
@@ -24,7 +22,6 @@ class Jeeps::CLI
     def get_user_year
         chosen_year = gets.strip.to_i
         show_mileage_for(chosen_year) if valid_input(chosen_year, @years)
-        end
     end
 
     def valid_input(input, data)
@@ -33,11 +30,7 @@ class Jeeps::CLI
 
     def show_mileage_for(chosen_year)
         year = @years[chosen_year - 1]
-        puts "Here is the mileage for #{year}"
-        ## to implement
-        # Jeeps::Mileage.all.each.with_index(1) do | mileage |
-        #     puts mileage.number
-        #end
-        # get_mpg_for
+        mileage = year.mileage
+        puts "Here is the mileage for #{year.name}"
     end
 end
