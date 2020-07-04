@@ -82,6 +82,7 @@ class Jeeps::CLI
     def show_mileage_for(chosen_year)
         year = @years[chosen_year - 1]
         puts "Here is the mileage for #{year}"
+        ## to implement
         # Jeeps::Mileage.all.each.with_index(1) do | mileage |
         #     puts mileage.number
         # end
