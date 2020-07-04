@@ -1,7 +1,6 @@
 class Jeeps::Year
     @@all = []
-    attr_accessor :name
-    attr_writer :mileage
+    attr_accessor :name, :mileage
 
     def initialize(name)
         @name = name
@@ -14,9 +13,8 @@ class Jeeps::Year
         @@all
     end
 
-    def mileage
-        Jeeps::Scraper.scrape_mileage(self) if @@mileage.empty
-        @mileage
+    def get_mileage
+        Jeeps::Scraper.scrape_mileage(self) if @@mileage.empty?
     end
 
     def save

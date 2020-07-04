@@ -30,7 +30,10 @@ class Jeeps::CLI
 
     def show_mileage_for(chosen_year)
         year = @years[chosen_year - 1]
-        mileage = year.mileage
-        puts "Here is the mileage for #{year.name}"
+        year.get_mileage
+        puts "Here is the combined mileage for #{year.name}"
+        year.mileage.each.with_index(1) do |mileage, idx|
+            puts "#{idx}. #{mileage.name}"
+        end
     end
 end

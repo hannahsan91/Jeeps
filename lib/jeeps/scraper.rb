@@ -16,7 +16,7 @@ class Jeeps::Scraper
         mileage = page.css("div#table-container")
         mileage.each do |m|
             number = m.text
-            Jeeps::Mileage.new(number)
+            Jeeps::Mileage.new(name)
         end
     end
 end
