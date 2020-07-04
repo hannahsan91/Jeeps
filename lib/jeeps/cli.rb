@@ -58,8 +58,7 @@ class Jeeps::CLI
     end
 
     def get_years
-        # to be scraped instead
-        @years = ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020']
+        @years = Jeeps::Year.all
     end
 
     def list_years
@@ -85,7 +84,8 @@ class Jeeps::CLI
         ## to implement
         # Jeeps::Mileage.all.each.with_index(1) do | mileage |
         #     puts mileage.number
-        # end
+        #end
         # get_mpg_for
     end
+    binding.pry
 end
